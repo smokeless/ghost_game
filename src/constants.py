@@ -1,0 +1,15 @@
+width = 640
+height = 480
+
+SCREEN_SIZE = (width, height)
+BLACK = 0, 0, 0
+WHITE = 255, 255, 255
+RED = 255, 0, 0
+GREEN = 0, 255, 0
+BLUE = 0, 0, 255
+GRAVITY = 5
+FLOOR = 440
+CEILING = 10
+NUMBER_OF_STARS = 70
+X_MIN = 0
+X_MAX = 605

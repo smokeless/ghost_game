@@ -1,16 +1,16 @@
-import pygame
-from .helper_functions import *
+from . import helper_functions
 from .constants import *
+import pygame
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, screen: pygame.display):
+    def __init__(self, screen: helper_functions.pygame.display):
         super(Player, self).__init__()
-        self.right_sprite = load_image('assets/ghost.png')
+        self.right_sprite = helper_functions.load_image('assets/ghost.png')
         self.image_rect = self.right_sprite.get_rect()
         self.screen = screen
-        self.left_sprite = load_image('assets/ghost.png')
-        self.left_sprite = pygame.transform.flip(self.left_sprite, True, False)
+        self.left_sprite = helper_functions.load_image('assets/ghost.png')
+        self.left_sprite = helper_functions.pygame.transform.flip(self.left_sprite, True, False)
         self.sprite = self.right_sprite
         self.facing = 'right'
         self.jumping = False

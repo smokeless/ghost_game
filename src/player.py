@@ -3,8 +3,9 @@ from .helper_functions import *
 from .constants import *
 
 
-class Player:
+class Player(pygame.sprite.Sprite):
     def __init__(self, screen: pygame.display):
+        super(Player, self).__init__()
         self.right_sprite = load_image('assets/ghost.png')
         self.image_rect = self.right_sprite.get_rect()
         self.screen = screen
@@ -36,6 +37,9 @@ class Player:
             self.image_rect.x = self.image_rect.x
         else:
             self.image_rect.x = self.image_rect.x + distance
+
+    def move_down(self, distance: int):
+        self.image_rect.y += distance
 
     def jump(self):
         self.jumping = True
